@@ -28,8 +28,6 @@ public class UsersController : BaseApiController
         _userRepository = userRepository;
         
     }
-
-
     [HttpGet]
     public async Task<ActionResult<PagedList<MemberDto>>> GetUSers([FromQuery]UserParams userParams)
     {
@@ -47,7 +45,6 @@ public class UsersController : BaseApiController
 
         return Ok(users);
     }
-
 
     [HttpGet("{username}")]  // /api/users/2
     public async Task<ActionResult<MemberDto>> GetUser(string username)
